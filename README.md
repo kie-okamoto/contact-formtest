@@ -30,7 +30,7 @@
 
 ## ER 図
 
-![ER図](images/er_diagram_updated2.png)
+![ER図](images/er_diagram_fix.png)
 
 ## URL
 
