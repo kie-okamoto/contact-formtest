@@ -4,16 +4,20 @@
 
 ### Docker ビルド
 
-1. git clone git@github.com:kie-okamoto/contact-formtest.git
+1. git clone https://github.com/kie-okamoto/contact-formtest.git
 
 2. docker-compose up -d --build
 
 ※ MySQL は OS によって起動しない場合があるので、必要に応じて docker-compose.yml を編集してください。
 
-### Laravel環境構築
+### Laravel 環境構築
+
 1. docker-compose exec php bash
 2. composer install
-3. .env.exampleから.envを作成し、環境変数を変更
+3. `.env` ファイルを作成  
+   以下のコマンドを実行して `.env.example` から `.env` をコピーします：  
+   `cp .env.example .env`
+
 4. php artisan key:generate
 5. php artisan migrate
 6. php artisan db:seed
@@ -24,11 +28,11 @@
 - Laravel 8.83.8
 - MySQL 8.0.26
 
-## ER図
+## ER 図
 
-![ER図](./er-diagram.png)
+![ER図](images/er_diagram_updated2.png)
 
 ## URL
 
 - 開発環境: http://localhost/
-- phpMyAdmin:  http://localhost:8080/
+- phpMyAdmin: http://localhost:8080/
