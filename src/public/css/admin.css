@@ -1,0 +1,380 @@
+/* 共通スタイル */
+body {
+  font-family: 'Inika', Arial, sans-serif;
+  background-color: white;
+  color: #4e3e2f;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+/* ヘッダー */
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ロゴは中央寄せ */
+.header-center {
+  justify-content: center;
+}
+
+/* loginは右寄せ */
+.header-right {
+  justify-content: flex-end;
+}
+
+/* ロゴデザイン */
+.header-logo {
+  font-size: 40px;
+  color: #4e3e2f;
+  text-decoration: none;
+  font-family: 'Inika', serif;
+}
+
+/* logoutボタンデザイン */
+.header-logout {
+  width: 100px;
+  height: 34px;
+  font-size: 18px;
+  color: #d9c6b5;
+  text-decoration: none;
+  border: 1px solid #b9a79d;
+  padding: 0px 16px;
+  border-radius: 3px;
+  margin-right: 100px;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 管理コンテナ・検索 */
+.admin-container {
+  max-width: 1183px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.admin-title {
+  font-family: 'Inika',serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+.admin-search-form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* 名前・メールアドレス入力欄 */
+.admin-search-form input[type="text"] {
+  width: 347px;
+  height: 50px;
+}
+
+/* 性別セレクトボックス */
+.gender-select {
+  width: 102px;
+  height: 50px;
+}
+
+/* お問い合わせの種類セレクトボックス */
+.type-select {
+  width: 223px;
+  height: 50px;
+}
+
+/* 日付セレクトボックス */
+.date-select {
+  width: 148px;
+  height: 50px;
+}
+
+/* 検索ボタン */
+.admin-search-form button {
+  width: 102px;
+  height: 50px;
+  font-size: 18px;
+}
+
+/* リセットボタン */
+.reset-btn {
+  width: 102px;
+  height: 50px;
+}
+
+/* 共通ボタンスタイル（検索・エクスポートなど） */
+.admin-search-form button,
+.export-btn {
+  padding: 6px 12px;
+  background-color: #88786b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* 共通の入力欄とセレクトボックスの中央揃え */
+.admin-search-form input,
+.admin-search-form select {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.reset-btn {
+  width: 102px;
+  height: 50px;
+  background-color: #d5c8b9;
+  color: white;
+  font-size: 18px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.detail-btn {
+  width: 102px;
+  height: 50px;
+  background: #f4f4f4;
+  border: 1px solid #d9c6b5;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #d9c6b5;
+  text-decoration: none;
+}
+
+/* エクスポートボタンの親フォーム */
+form[action*="export"] {
+  margin-bottom: 20px;
+}
+
+/* テーブル */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #e0dfde;
+}
+
+.admin-table th {
+  background-color: #8b7969;
+  color: white;
+}
+
+.admin-table th,
+.admin-table td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  padding: 10px 10px 10px 32px;
+}
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* モーダル内容 */
+.modal-content {
+  background: white;
+  width: 805px;
+  height: 858px;
+  padding: 20px 40px;
+  border-radius: 6px;
+  border: 1px solid #8b7969;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-y: auto;
+}
+/* モーダルテーブル */
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.modal-content th,
+.modal-content td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.modal-content th {
+  width: 160px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #8B7969;
+  white-space: nowrap;
+  padding-right: 40px;
+}
+
+.modal-content td {
+  width: 413px;
+  font-size: 20px;
+  color: #8B7969;
+}
+
+.modal-content td.content-text {
+  font-size: 18px;
+}
+
+.hide-postcode {
+  display: none;
+}
+
+/* モーダル削除ボタン中央配置 */
+.modal-content .form__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 削除ボタン */
+.delete-btn {
+  width: 76px;
+  height: 39px;
+  background-color: #ba370d;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+/* 閉じボタン */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: white;
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #eee;
+}
+
+.admin-export-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-export-pagination form {
+  margin: 0;
+}
+
+.pagination-top {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ページネーション全体 */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* 各ページ番号・矢印ボタン */
+.pagination li {
+  margin: 0px;
+}
+
+.pagination li a,
+.pagination li span {
+  display: block;
+  padding: 6px 12px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  color: #4e3e2f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* 現在のページ */
+.pagination .active span {
+  background-color: #8b7969;
+  color: white;
+  border-color: #8b7969;
+}
+
+/* 無効なページ（前へ／次へ） */
+.pagination .disabled span {
+  color: #aaa;
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  cursor: not-allowed;
+}

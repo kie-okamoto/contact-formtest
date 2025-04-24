@@ -1,0 +1,186 @@
+/* 共通設定 */
+body {
+  font-family: 'Inika', Arial, sans-serif;
+  background-color: white;
+  color: #4e3e2f;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+/* ヘッダー */
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border-bottom: 1px solid #E0DFDE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  font-size: 40px;
+  text-decoration: none;
+  color: #4e3e2f;
+}
+
+/* フォーム中央寄せ */
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* メインコンテンツ */
+.contact-form__content {
+  width: 972px;
+  min-height: 606px;
+  margin: 0px auto;
+  background-color: #fff;
+  padding: 48px 32px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-form__heading h2 {
+  font-family: 'Inika', serif;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+/* グループ */
+.form__group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* ラベル（左側） */
+.form__label {
+  width: 331px;
+  font-size: 20px;
+  padding-top: 12px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.form__label--required {
+  color: #d9534f;
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+/* 入力欄全体（右側） */
+.form__input {
+  width: 618.82px;
+}
+
+.form__input input[type="text"],
+.form__input input[type="email"],
+.form__input select,
+.form__input textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+  /* お問合せの種類 */
+.form__input--select select {
+  width: 300px;
+}
+
+/* お名前：2つのinputを横並び */
+.name-inputs {
+  display: flex;
+  gap: 16px;
+}
+
+.name-inputs input[type="text"] {
+  flex: 1;
+}
+
+.tel-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tel-inputs input {
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.tel-inputs span.hyphen {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+.tel-inputs input[type="text"] {
+  flex: 1;
+}
+
+/* ラジオボタン */
+.form__radio-group {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* テキストエリア */
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* ボタン */
+.form__button {
+  display: flex;
+  justify-content: center;
+}
+
+/* エラー表示 */
+.form__error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.form__button button {
+  min-width: 160px;
+  height: 46px;
+  background-color: #7c6e65;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.form__button-submit:hover {
+  background-color: #5a4e47;
+}
